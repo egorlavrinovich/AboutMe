@@ -1,0 +1,57 @@
+ .wrapper { /* Наша оболочка всей страницы */
+    min-height: 100%;
+    display: grid;
+    grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr; /* Создаём для header minmax(100px, auto), для main 1fr и для footer minmax(70px, auto), т.е. мы создали 3 ряда и 1 колонку */
+    grid-template-areas: "header" "main" "footer"; /* Создаём имена для наших grid-элементов  */
+}
+.header {
+    grid-area: header;
+    padding: 15px;
+    background-color: blue;
+    display: grid;
+    grid-template: 1fr / 1fr minmax(auto,1100px) 1fr; /* Создаём 1 ряд (header) и 3 колонки, как ограничивающий контейнер для наших пунктов меню */
+
+}
+.header__menu {
+     grid-column: 2/3; /* Помещаем пункты меню в во вотрую колонку, где указаны наши размеры minmax(auto,1100px) */
+}
+.header__list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: end;
+}
+.header__link {
+    color: aqua;
+    font-size: medium;
+}
+.header__burger {
+}
+.main {
+}
+.sidebar {
+}
+.sidebar_menu {
+}
+.sidebar_list {
+}
+.sidebar__link {
+}
+.content {
+}
+.content__title {
+}
+.content__gallery {
+}
+.gallery {
+}
+.gallery__title {
+}
+.gallery__items {
+}
+.gallery__item {
+}
+.footer {
+    background-color: yellow;
+}
+.footer__copy {
+}
