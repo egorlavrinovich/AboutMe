@@ -1,0 +1,90 @@
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+
+ .wrapper { /* Наша оболочка всей страницы */
+    min-height: 100%;
+    display: grid;
+    grid-template: minmax(50px, auto) 1fr minmax(70px, auto) / 1fr; /* Создаём для header minmax(100px, auto), для main 1fr и для footer minmax(70px, auto), т.е. мы создали 3 ряда и 1 колонку */
+    grid-template-areas: "header" "main" "footer"; /* Создаём имена для наших grid-элементов  */
+    background: url('../img/background.png');
+}
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template: 1fr / 1fr minmax(auto,1100px) 1fr; /* Создаём 1 ряд (header) и 3 колонки, как ограничивающий контейнер для наших пунктов меню */
+    border: 1px solid #D3D3D3;
+	border-radius: 15px;
+	background: -moz-linear-gradient(top,  #c7cccf 8%, #c7cccf 8%, #c7cccf 20%, #d3d8db 55%, #e0e3e6 69%, #e0e3e6 69%, #e2e5e6 79%, #e2e5e6 79%, #e2e5e6 81%, #e0e3e6 89%);
+	background: -webkit-linear-gradient(top,  #c7cccf 8%,#c7cccf 8%,#c7cccf 20%,#d3d8db 55%,#e0e3e6 69%,#e0e3e6 69%,#e2e5e6 79%,#e2e5e6 79%,#e2e5e6 81%,#e0e3e6 89%);
+	background: linear-gradient(to bottom,  #c7cccf 8%,#c7cccf 8%,#c7cccf 20%,#d3d8db 55%,#e0e3e6 69%,#e0e3e6 69%,#e2e5e6 79%,#e2e5e6 79%,#e2e5e6 81%,#e0e3e6 89%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7cccf', endColorstr='#e0e3e6',GradientType=0 );
+	font-family: Tahoma, "Helvetica Neue", Helvetica, sans-serif;
+    position: sticky; /* Делаем наш элемент липким */
+    top: 1% /* Нужен для sticky (отступ сверху), без него работать не будет */
+}
+.header__menu {
+     grid-column: 2/3; /* Помещаем пункты меню в во вотрую колонку, где указаны наши размеры minmax(auto,1100px) */
+     /* background-color: black; */
+}
+.header__list {
+    display: grid;
+    grid-auto-flow: column; /* (выставляем наши пункты меню в ряды (для колонок) автоматически) */
+    justify-items: center; /* (выставляем наше содержимое (пункты меню) по левому краю) */
+    position: relative;
+}
+.header__list img{
+   margin-bottom: 10px;
+}
+.header li a:hover{
+    padding: 12.5px 0px 14px 0px;
+	border-radius: 45%;
+	background: #c7cccf;
+    text-decoration-line: underline
+}
+.header__link {
+    color: rgb(82, 75, 75);
+    font-size: medium;
+}
+.header__burger {
+}
+.main {
+}
+.sidebar {
+}
+.sidebar_menu {
+}
+.sidebar_list {
+}
+.sidebar__link {
+}
+.content {
+}
+.content__title {
+}
+.content__gallery {
+}
+.gallery {
+}
+.gallery__title {
+}
+.gallery__items {
+}
+.gallery__item {
+}
+.footer {
+    background-color: yellow;
+}
+.footer__copy {
+}
