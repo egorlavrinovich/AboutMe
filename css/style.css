@@ -23,7 +23,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .header {
     grid-area: header;
     display: grid;
-    grid-template: 1fr / 1fr minmax(auto,1100px) 1fr; /* Создаём 1 ряд (header) и 3 колонки, как ограничивающий контейнер для наших пунктов меню */
+    grid-template: 1fr / 25% minmax(auto,1100px) 1fr; /* Создаём 1 ряд (header) и 3 колонки, как ограничивающий контейнер для наших пунктов меню */
     border: 1px solid #D3D3D3;
 	border-radius: 15px;
 	background: -moz-linear-gradient(top,  #c7cccf 8%, #c7cccf 8%, #c7cccf 20%, #d3d8db 55%, #e0e3e6 69%, #e0e3e6 69%, #e2e5e6 79%, #e2e5e6 79%, #e2e5e6 81%, #e0e3e6 89%);
@@ -42,8 +42,34 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     display: grid;
     grid-auto-flow: column; /* (выставляем наши пункты меню в ряды (для колонок) автоматически) */
     justify-items: center; /* (выставляем наше содержимое (пункты меню) по центру) */
-    align-items: center;
+    align-items: center; 
     position: relative;
+}
+.Me{
+    background: url('../img/youtube.ico') 50%  no-repeat;
+    padding: 1% 0 0 55%;
+    background-size: 13%
+}
+.Project{
+    background: url('../img/work.png') 50% no-repeat;
+    padding: 1% 0 0 55%;
+    background-size: 11%
+}
+.Hobbies{
+    background: url('../img/projects.ico') 50% no-repeat;
+    padding: 1% 0 0 55%;
+    background-size: 11% 
+}
+.Contacts{
+    background: url('../img/contacts.ico') 50% no-repeat;
+    padding: 1% 0 0 50%;
+    background-size: 13% 
+}
+body{
+    background: url('../img/11.png');
+	max-width: 100%;
+	position: relative;
+    
 }
 .header li a:hover{
     padding: 12.5px 0px 14px 0px;
@@ -58,14 +84,29 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .header__burger {
 }
 .main {
+    grid-area: main;
+    padding: 30px 15px;
+    
 }
-.sidebar {
+.photo p{
+	margin: 10px 0 0 43.5%;
+	font-size: 18px;
+	font-weight: 450;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-.sidebar_menu {
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	font-size: 18px;
+	font-weight: 450;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-.sidebar_list {
-}
-.sidebar__link {
+.photo1{
+	margin: 50px 0 0 46%; 
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
 }
 .content {
 }
@@ -76,13 +117,62 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .gallery {
 }
 .gallery__title {
+    display: flex;
+    font-size: large;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    justify-content: center;
 }
 .gallery__items {
+    display: grid;
+    grid-column: 2/3;
+    column-gap: 10px;
+    row-gap: 30px;
+    grid-auto-flow: row;
+    grid-template: 1fr / repeat(auto-fit, minmax(200px,32%))  ;
+    /* grid-template-columns: repeat(3, minmax(200px,32%)) ; */
+    margin: 0 25%;
 }
-.gallery__item {
+.gallery__image {
+    position: relative;
+    padding: 0 0 90% 0;
+    margin: 0 0 20px 0;
+}
+.gallery__item{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr; /* Нужен для  того чтобы колонки подстраивались друг под друга */
+    grid-template: auto minmax(40px,auto) 5%  / 1fr;
+}
+.gallery__item img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Адаптируем наше изображение */
+}
+.products__image{
+    display: flex;
+    background-color: rgb(236, 236, 4);
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+    border-radius: 5%;
 }
 .footer {
-    background-color: yellow;
+    background: url('../img/11.png');
+    display: flex;
+    justify-content: center;
 }
 .footer__copy {
+}
+
+@media (max-width: 450px){
+    .main{
+        grid-area: main;
+        display: grid;
+        grid-template: 1fr / 1fr ;
+    }
 }
