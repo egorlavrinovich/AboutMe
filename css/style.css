@@ -41,11 +41,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .header__list {
     display: grid;
     grid-auto-flow: column; /* (выставляем наши пункты меню в ряды (для колонок) автоматически) */
-    justify-items: center; /* (выставляем наше содержимое (пункты меню) по левому краю) */
+    justify-items: center; /* (выставляем наше содержимое (пункты меню) по центру) */
+    align-items: center;
     position: relative;
-}
-.header__list img{
-   margin-bottom: 10px;
 }
 .header li a:hover{
     padding: 12.5px 0px 14px 0px;
@@ -55,7 +53,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 }
 .header__link {
     color: rgb(82, 75, 75);
-    font-size: medium;
+    font-size: medium; 
 }
 .header__burger {
 }
