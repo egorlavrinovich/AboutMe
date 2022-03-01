@@ -38,11 +38,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
      grid-column: 2/3; /* Помещаем пункты меню в во вотрую колонку, где указаны наши размеры minmax(auto,1100px) */
      /* background-color: black; */
 }
-.header__list {
-    display: grid;
-    grid-auto-flow: column; /* (выставляем наши пункты меню в ряды (для колонок) автоматически) */
-    justify-items: center; /* (выставляем наше содержимое (пункты меню) по левому краю) */
-    position: relative;
+.header__list{
+    display: flex; /* grid-auto-flow: row; (выставляем наши пункты меню в ряды (для колонок) автоматически) */
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    justify-items: center; /* (выставляем наше содержимое (пункты меню) по центру) */
+    
+}
+.header__list li{
+    padding-top:20px;
 }
 .header__list img{
    margin-bottom: 10px;
