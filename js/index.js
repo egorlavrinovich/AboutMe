@@ -3,8 +3,9 @@ const burgerMenu  = document.querySelector('.header__menu'),
       ScrollBody = document.getElementsByClassName('body'),
       StyleMoto = document.querySelector('.gallery__image img'),
       Myhobbies = document.querySelector('.Myhobbies'),
-      Hobbi = document.querySelector('.gallery__items'),
-      MyProjects = document.querySelector('.Myprojects')
+      Gallery = document.querySelector('.gallery__items'),
+      MyProjects = document.querySelector('.Myprojects'),
+      Aboutme = document.querySelector('.Aboutme')
 
 burgerClick.addEventListener('click',()=>{
     burgerMenu.classList.toggle('active');
@@ -13,12 +14,16 @@ burgerClick.addEventListener('click',()=>{
 })
 
 Myhobbies.addEventListener('click',()=>[
-    Hobbi.classList.toggle('active')
+    Gallery.classList.toggle('hobbi')
 
 ])
 
 MyProjects.addEventListener('click',()=>{
-    MyProjects.classList.toggle('active')
+    Gallery.classList.toggle('projects')
+})
+
+Aboutme.addEventListener('click',()=>{
+    Gallery.classList.toggle('aboutme')
 })
 
 $(document).ready(function(){

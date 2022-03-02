@@ -1,0 +1,88 @@
+@media (max-width: 912px){ 
+    body.lock{
+        overflow: hidden; /* убираем скроллинг */
+    }
+    .gallery {
+     margin: 0 0 0 20%;
+     }
+     .header__burger{
+         display: block;
+         position: relative;
+         margin-top: 6%;
+         margin-left: 15%;
+         width: 30px;
+         height: 20px;
+     }
+        .header__burger span{ /* отрисовка линий бургер меню */
+         position: absolute;
+         background-color: rgb(85, 84, 84);
+         left: 0;
+         width: 100%;
+         height: 2.5px;
+         top: 9px;
+         transition: all 0.3s ease 0s;
+     }
+     .header__burger:before,/* отрисовка линий бургер меню */
+     .header__burger:after{/* отрисовка линий бургер меню */
+         content: '';
+         background-color:rgb(85, 84, 84) ;
+         position: absolute;
+         width: 100%;
+         height: 2.5px;
+         left:0;
+     }
+     .header__burger:before{ /* отрисовка линий бургер меню */
+         top:0
+     } 
+     .header__burger:after{ /* отрисовка линий бургер меню */
+         bottom:0
+     }
+     .header__burger.active:before{ /* отрисовка крестика в бургер меню */
+        transform: rotate(45deg);
+        top: 9px;
+     }
+     .header__burger.active:after{ /* отрисовка крестика в бургер меню */
+        transform: rotate(-45deg);
+        bottom: 9px;
+     }
+     .header__burger.active span { /* убираем среднюю линию в бургер меню при появлении крестика */
+         transform: scale(0);
+     }
+     .header__menu{
+         position: fixed;
+         top: 5%;
+         left: 100%;
+         width: 100%;
+         height: 100%;
+         background:url('../img/background.png');
+         z-index: 1;
+         transition: all 0.3s ease 0s;
+         overflow: auto; /* нужно для того чтобы был скролл */
+     }
+     .header__menu.active{
+        left: 2%;
+        top:6%
+     }
+     .header__list{
+        display: inline-block;
+        top: 0;
+        left: 0;
+    }
+     .header__list li{
+        font-size: xx-large;
+        margin-right: 35% ;
+        background-size: 55%;
+    }
+    .header__link{
+        font-size: xx-large;
+        display: inline-block;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+    }
+    .header li a:hover{
+        /* padding: 12.5px 0px 14px 0px; */
+        border-radius: 45%;
+        background: #c7cccf;
+        text-decoration-line: underline
+    }
+}

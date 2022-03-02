@@ -1,0 +1,26 @@
+.main {
+    grid-area: main;
+    padding: 30px 15px;
+    
+}
+.photo p{
+	margin: 10px 0 0 43.5%;
+	font-size: 18px;
+	font-weight: 450;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	font-size: 18px;
+	font-weight: 450;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.photo1{
+	margin: 50px 0 0 46%; 
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+    display: block;/*  Нужно для того чтобы картинка была круглая */
+}

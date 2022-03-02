@@ -1,0 +1,60 @@
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template: 1fr / 25% minmax(auto,1100px) 1fr; /* Создаём 1 ряд (header) и 3 колонки, как ограничивающий контейнер для наших пунктов меню */
+    border: 1px solid #D3D3D3;
+	border-radius: 15px;
+	background: -moz-linear-gradient(top,  #c7cccf 8%, #c7cccf 8%, #c7cccf 20%, #d3d8db 55%, #e0e3e6 69%, #e0e3e6 69%, #e2e5e6 79%, #e2e5e6 79%, #e2e5e6 81%, #e0e3e6 89%);
+	background: -webkit-linear-gradient(top,  #c7cccf 8%,#c7cccf 8%,#c7cccf 20%,#d3d8db 55%,#e0e3e6 69%,#e0e3e6 69%,#e2e5e6 79%,#e2e5e6 79%,#e2e5e6 81%,#e0e3e6 89%);
+	background: linear-gradient(to bottom,  #c7cccf 8%,#c7cccf 8%,#c7cccf 20%,#d3d8db 55%,#e0e3e6 69%,#e0e3e6 69%,#e2e5e6 79%,#e2e5e6 79%,#e2e5e6 81%,#e0e3e6 89%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7cccf', endColorstr='#e0e3e6',GradientType=0 );
+	font-family: Tahoma, "Helvetica Neue", Helvetica, sans-serif;
+    position: sticky; /* Делаем наш элемент липким */
+    top: 1%; /* Нужен для sticky (отступ сверху), без него работать не будет */
+    z-index: 50;
+}
+
+.header__menu {
+     grid-column: 2/3; /* Помещаем пункты меню в во вотрую колонку, где указаны наши размеры minmax(auto,1100px) */
+     /* background-color: black; */
+}
+
+.header__list {
+    display: grid;
+    grid-auto-flow: column; /* (выставляем наши пункты меню в ряды (для колонок) автоматически) */
+    justify-items: center; /* (выставляем наше содержимое (пункты меню) по центру) */
+    align-items: center; 
+    position: relative;
+
+}
+
+.Me{
+   
+    background: url('../img/youtube.ico') 50%  no-repeat;
+    padding: 1% 0 0 55%;
+    background-size: 19%
+}
+.Project{
+    background: url('../img/work.png') 50% no-repeat;
+    padding: 1% 0 0 60%;
+    background-size: 11%
+}
+.Hobbies{
+    background: url('../img/projects.ico') 50% no-repeat;
+    padding: 1% 0 0 60%;
+    background-size: 11% 
+}
+.Contacts{
+    background: url('../img/contacts.ico') 50% no-repeat;
+    padding: 1% 0 0 60%;
+    background-size: 13% 
+}
+.header li :hover{
+	border-radius: 45%;
+	background: #c7cccf;
+    text-decoration-line: underline
+}
+.header__link {
+    color: rgb(82, 75, 75);
+    font-size: medium; 
+}

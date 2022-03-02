@@ -1,0 +1,7 @@
+.wrapper { /* Наша оболочка всей страницы */
+    min-height: 100%;
+    display: grid;
+    grid-template: minmax(50px, auto) 1fr minmax(70px, auto) / 1fr; /* Создаём для header minmax(100px, auto), для main 1fr и для footer minmax(70px, auto), т.е. мы создали 3 ряда и 1 колонку */
+    grid-template-areas: "header" "main" "footer"; /* Создаём имена для наших grid-элементов  */
+    background: url('../img/background.png');
+}

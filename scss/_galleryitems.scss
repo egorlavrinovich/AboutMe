@@ -1,0 +1,66 @@
+.gallery {
+    padding: 0 0 0 5%;
+}
+.gallery__items {
+    display: grid;
+    grid-column: 2/3;
+    column-gap: 10px;
+    row-gap: 30px;
+    grid-auto-flow: row;
+    grid-template: 1fr / repeat(auto-fit, minmax(200px,32%))  ;
+    /* grid-template-columns: repeat(3, minmax(200px,32%)) ; */
+    margin: 0 25%;
+}
+.gallery__image {
+    position: relative;
+    padding: 0 0 90% 0;
+    margin: 0 0 20px 0;
+}
+.gallery__item{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr; /* Нужен для  того чтобы колонки подстраивались друг под друга */
+    grid-template: auto minmax(40px,auto) 5%  / 1fr;
+}
+.gallery__item span{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Адаптируем наше изображение */
+}
+.products__image{
+    display: flex;
+    background-color: rgb(236, 236, 4);
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+    border-radius: 5%;
+}
+.null{
+    background: url('../img/6.jpg') 100% no-repeat;
+    background-size: cover;
+}
+.first{
+    background: url('../img/1.jpg') 100% no-repeat;
+    background-size: cover;
+}
+.second{
+    background: url('../img/2.jpg') 100% no-repeat;
+    background-size: cover;  
+}
+.third{
+    background: url('../img/3.jpg') 100% no-repeat;
+    background-size: cover;
+}
+.four{
+    background: url('../img/4.jpg') 100% no-repeat;
+    background-size: cover;
+}
+.five{
+    background: url('../img/5.jpg') 100% no-repeat;
+    background-size: cover;
+}
