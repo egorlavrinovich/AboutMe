@@ -4,8 +4,12 @@
 @import "Aboutme";
 @import "body";
 @import "galleryitems";
-@import "MobileVersion";
 
+.my__projects.active {
+    display: block;
+    margin-top: 100px;
+    background: url('../img/20.jpg');
+}
 
 @media (max-width: 912px){ 
     body.lock{
@@ -143,11 +147,18 @@
 .footer__copy {
 }
 
-
-.gallery__items.hobbi{
-    .gallery__items {
-        display: block;
-        opacity: 0;
-        display: none;
-    }
+.Projects2{
+    position: fixed;
+    top: 100%;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background:url('../img/1.jpg') 100% no-repeat;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+    overflow: auto; /* нужно для того чтобы был скролл */
+}
+.Projects2.active{
+    left: 0;
+    top:0
 }
