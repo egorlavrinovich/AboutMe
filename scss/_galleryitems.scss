@@ -27,7 +27,8 @@
 .gallery__items_hobbies.active {
    @extend %commongrid;
 }
-.gallery__items_projects.active{
+.gallery__items_projects.active
+{
     @extend %commongrid;
 }
 .gallery__items_projects{
